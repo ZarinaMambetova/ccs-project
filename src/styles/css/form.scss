@@ -1,0 +1,114 @@
+.form__container {
+  flex-direction: column;
+}
+
+.form__error {
+ color: red;
+ display: none;
+ font-size: 14px;
+}
+
+.form__row {
+ display: flex;
+ justify-content: space-between;
+ margin-bottom: 30px;
+
+  @media (max-width: 800px) { 
+    flex-direction: column;
+    margin-bottom: 15px;
+  } 
+}
+.form__block {
+  position: relative;
+  width: 31%;
+
+  @media (max-width: 800px) { 
+    width: 100%;
+    margin-bottom: 15px;
+  } 
+}
+.label_animate {
+  position: absolute;
+  pointer-events: none;
+  font-size: 16px;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  padding-left: 24px;
+  transform: translateY(-50%);
+  transition: all ease-in 0.25s;
+  color: #272733;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  color: $black;
+  padding: 31px 24px 8px;
+  border: 1px solid #FFFFFF;
+  border-radius: 3px;
+  transition: border 0.3s;
+  cursor: pointer;
+  font-size: 18px;
+
+
+  &:focus {
+    border: 1px solid $blue;
+    outline: none;
+    background: $white;
+  }
+
+  &:hover {
+    border: 1px solid $blue;
+    outline: none;
+    background: $white;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border-color: #e15433;
+
+  }
+
+  &::-webkit-input-placeholder {
+    opacity: 0;
+  }
+  &::-moz-placeholder {
+    opacity: 0;
+  }
+  &:-ms-input-placeholder {
+    opacity: 0;
+  }
+  &:-moz-placeholder {
+    opacity: 0;
+  }
+  &:focus ~ .label_animate,
+  &:not(:placeholder-shown) ~ .label_animate {
+    top: 30%;
+    font-size: 12px;
+  }
+  &:invalid:not(:placeholder-shown) ~ .form__error {
+    display: block;
+  }
+}
+
+
+.form__row-button {
+  justify-content: center;
+  padding: 10px 0 0;
+}
+
+.order__form-btn {
+  font-weight: 600;
+font-size: 15px;
+line-height: 18px;
+text-transform:uppercase;
+width: 100%;
+padding: 20px 20px;
+@media (max-width: 800px) { 
+  width: auto;
+padding: 20px 60px;
+} 
+}
+

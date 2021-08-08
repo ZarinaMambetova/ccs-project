@@ -1,0 +1,62 @@
+.circuit__list {
+  display: flex;
+  padding: 70px 0;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.circuit__icon-pic {
+  width: 100px;
+  height: 100px;
+}
+
+.circuit__item {
+  width: 25%;
+  &:last-child .circuit__icon:after {
+    display: none;
+    content: '';
+  }
+}
+
+.circuit__name {
+  padding: 20px 5px 5px;
+}
+
+.circuit__icon {
+  position: relative;
+}
+.circuit__icon:after {
+  content: '. . . . .';
+  position: absolute;
+  display: inline-block;
+  width: 100px;
+  height: 19px;
+  top: 23px;
+  right: -23%;
+  font-size: 30px;
+  letter-spacing: 5px;
+
+  @media (max-width: 1191px) { 
+    letter-spacing: 2px;
+    width: 74px;
+    right: -18%;
+  } 
+  @media (max-width: 1042px) {
+    content: '. . .';
+    letter-spacing: 0px;
+    width: 31px;
+    right: -8%;
+  }
+   @media (max-width: 908px) {
+     content: '. .';
+  width: 26px;
+  right: -6%;
+  font-size: 25px;
+
+  }
+  @media (max-width: 769px) {
+    content: '';
+display: none;
+
+ }
+}

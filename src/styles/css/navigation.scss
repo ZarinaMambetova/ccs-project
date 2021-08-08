@@ -1,0 +1,77 @@
+.header__navigation {
+  width: 35%;
+    @media (max-width: 1010px) { 
+      width: 50%;
+    }
+    @include tablet { 
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    @include phone {  
+      display: flex;
+      justify-content: flex-end;
+    }
+}
+
+.navigation__list {
+  display: flex;
+  justify-content: space-between;
+  @include tablet { 
+    right: -400px;
+    transition: right .3s;
+    position: fixed;
+    display: flex;
+    padding-left: 40px;
+    top: 97px;
+    width: 50%;
+    height: 100%;
+    background: rgba(16, 16, 29, 0.9);
+    z-index: 999;
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+    transition: right .3s;
+      & .navigation__item {
+        margin-bottom: 20px;
+ 
+      } 
+
+ }
+    @include phone { 
+      right: -400px;
+    transition: right .3s;
+    position: fixed;
+    display: flex;
+    padding-left: 40px;
+    top: 97px;
+    height: 100%;
+    background: rgba(16, 16, 29, 0.9);
+    z-index: 999;
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+    transition: right .3s;
+      width: 80%;
+      & .navigation__item {
+        margin-bottom: 20px;
+  
+      } 
+        }
+
+}
+
+.menu-open .header .navigation__list {
+  right: 0;
+  transition: right .3s;
+
+  }
+
+
+.navigation__item {
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,35 @@
+.section_order {
+  background: url(./images/pic/bg/black-bg.png) 100% no-repeat;
+    height: 100%;
+    min-height: 758px;
+    background-size: cover;
+}
+
+.order__container {
+  flex-direction: column;
+  padding: 112px 0;
+  text-align: center;
+  @include tablet { 
+    padding: 80px 0;
+  } 
+  @include phone { 
+    padding: 40px 0;
+  } 
+}
+
+.order__subtitle {
+  color: #BBBBBB;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 15px;
+  @include tablet { 
+    font-size: 16px;
+  }
+
+  @include phone {  
+    font-size: 16px;
+  }
+  
+}
+
+

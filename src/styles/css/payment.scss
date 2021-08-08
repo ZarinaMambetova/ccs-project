@@ -1,0 +1,52 @@
+
+.payment {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.payment__item {
+  width: 33%;
+  display: flex;
+  color: $light-gray;
+  justify-content: center;
+
+  @media (max-width: 956px) { 
+    align-items: center;
+}
+  
+  @include tablet { 
+    justify-content: flex-end;
+  } 
+  @media (max-width: 582px) { 
+    justify-content: flex-start;
+  }
+}
+
+.payment__name br {
+  display: none;
+@media (max-width: 956px) { 
+    display: block;
+}
+@include tablet { 
+  display: none;
+} 
+}
+.payment__icon-pic {
+  width: 20px;
+  height: 20px;
+
+
+}
+
+.payment__icon-pic  {
+  fill: $white;
+}
+
+.payment__icon {
+  margin-right: 5px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

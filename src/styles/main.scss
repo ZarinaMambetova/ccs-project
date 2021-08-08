@@ -1,0 +1,22 @@
+//colors
+$white: #fff;
+$blue: #3E9CDC;
+$dark-blue: #286690;
+$hover: #43ABF0;
+$black: #000;
+$gray: #3D4050;
+$light-gray: #C3C3C3;
+
+// @media (max-width: 758px) { .... } - пример медиа-запроса при адаптиве
+
+//normalize
+@import "css/normalize.scss";
+
+
+
+// setups
+@import "css/media.scss";
+@import "css/*.scss";
+
+
+

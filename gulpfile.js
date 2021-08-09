@@ -11,7 +11,7 @@ const autoprefixer = require('gulp-autoprefixer'); // Подключаем па�
 const cleanCSS = require('gulp-clean-css'); // Подключили пакет: для минимизации файла стилей. Установка:  npm install gulp-clean-css --save-dev
 const sourcemaps = require('gulp-sourcemaps'); // Подключили пакет: для карты файлов в панели разработчика. Установка: npm i gulp-sourcemaps --save-dev
 
-const px2rem = require('gulp-px-to-rem'); // Переводит в ремы пиксели для адаптива. Установка:  npm i --save-dev  gulp-smile-px2rem
+const px2rem = require('gulp-smile-px2rem'); // Переводит в ремы пиксели для адаптива. Установка:  npm i --save-dev  gulp-smile-px2rem
 const gcmq = require('gulp-group-css-media-queries'); // Подключили пакет: группировка медиа-запросов для минимизации файла стилей. Установка: npm install --save-dev gulp-group-css-media-queries
 
 const babel = require('gulp-babel'); // Подключили пакет: преобразовываем js-код для старых браузеров. Установка:  npm i gulp-sourcemaps --save-dev
@@ -61,22 +61,26 @@ task('copy:fonts', () => {
 // 9 запись сорсмапов
 // 10 собираем всё в dist
 // 11 Перезагрузка сервера
+
+const st = [ 'src/styles/**/*.scss' ];
+
 task('styles', () => {
-  return (
-    src([ ...STYLES_LIBS, `${SRC_PATH}/styles/main.scss` ])
-      .pipe(gulpif(env === 'dev', sourcemaps.init()))
-      .pipe(concat('main.min.scss'))
-      .pipe(sassGlob())
-      .pipe(sass().on('error', sass.logError))
-      .pipe(px2rem())
-      // неправильно считает, уменьшает значения.Исправить!
-      .pipe(gulpif(env === 'dev', autoprefixer({ cascade: false })))
-      .pipe(gulpif(env === 'prod', gcmq()))
-      .pipe(gulpif(env === 'prod', cleanCSS({ compatibility: 'ie8' })))
-      .pipe(gulpif(env === 'dev', sourcemaps.write()))
-      .pipe(dest(DIST_PATH))
-      .pipe(reload({ stream: true }))
-  );
+  return src([ ...STYLES_LIBS, `${SRC_PATH}/styles/main.scss` ])
+    .pipe(gulpif(env === 'dev', sourcemaps.init()))
+    .pipe(concat('main.min.scss'))
+    .pipe(sassGlob())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(
+      px2rem({
+        dpr: 1
+      })
+    )
+    .pipe(gulpif(env === 'dev', autoprefixer({ cascade: false })))
+    .pipe(gulpif(env === 'prod', gcmq()))
+    .pipe(gulpif(env === 'prod', cleanCSS({ compatibility: 'ie8' })))
+    .pipe(gulpif(env === 'dev', sourcemaps.write()))
+    .pipe(dest(DIST_PATH))
+    .pipe(reload({ stream: true }));
 });
 
 // Далее: npm run gulp scripts - Запускает таск по обработке файлов js.

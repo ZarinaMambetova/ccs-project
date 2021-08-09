@@ -112,3 +112,13 @@ padding: 20px 60px;
 } 
 }
 
+// select
+.input__select {
+  padding: 15px;
+  &:hover {
+    background: rgba(61, 64, 80, 0.85);
+    color: $white;
+    border-radius: 3px 3px 0px 0px;
+    border: none;
+  }
+}

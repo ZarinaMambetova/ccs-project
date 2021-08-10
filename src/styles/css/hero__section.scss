@@ -74,7 +74,7 @@ position: relative;
   @include phone { 
     transform: translate(0%, 35%);
   } 
-  @media (max-width: 413px) { 
+  @media (max-width: 404px) { 
     transform: translate(0%, 24%) !important;
   } 
 }

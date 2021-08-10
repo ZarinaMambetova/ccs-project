@@ -39,6 +39,10 @@
     justify-content: flex-start;
     width: 43%;
   }
+  @include phone { 
+    justify-content: flex-start;
+    width: 100%;
+  }
 }
 
 .contacts__link {

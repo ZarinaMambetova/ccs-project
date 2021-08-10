@@ -21,6 +21,9 @@
   @media (max-width: 582px) { 
     justify-content: flex-start;
   }
+  @include phone { 
+    justify-content: flex-start;
+  }
 }
 
 .payment__name br {

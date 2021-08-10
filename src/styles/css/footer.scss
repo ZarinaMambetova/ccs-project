@@ -102,4 +102,7 @@
 
 .footer__col-contacts {
   justify-content: flex-end;
+  @media (max-width: 582px) { 
+    width: 100%;
+  }
 }

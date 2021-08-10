@@ -21,9 +21,12 @@
       line-height: 47px;
       } 
    @include phone { 
-    line-height: 38px;
+    line-height: 33px;
+    font-size: 26px;
    }
-
+   @media (max-width: 341px) {
+    font-size: 24px ;
+  }
 }
 
 .title__black {

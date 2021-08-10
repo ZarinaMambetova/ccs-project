@@ -75,7 +75,7 @@ position: relative;
     transform: translate(0%, 35%);
   } 
   @media (max-width: 413px) { 
-    transform: translate(0%, 24%);
+    transform: translate(0%, 24%) !important;
   } 
 }
 

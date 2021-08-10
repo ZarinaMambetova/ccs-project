@@ -10,7 +10,11 @@ $(function() {
     e.preventDefault();
   });
 });
-
+$(function() {
+  $('html').on('click', '#toForm1', function(e) {
+    $('#toForm').trigger(e.type);
+  });
+});
 // Закрытие гамбургер-меню при нажатии на пункт меню:
 $(function() {
   if ($(window).width() <= '720') {

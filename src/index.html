@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Raleway:wght@400;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.min.css">
   </head>
   <body>
@@ -133,59 +133,60 @@
               </div>
             </li>
           </ul>
-          <div class="form_order"><div class="container form__container"></div>
-            <form action="" id="form">
-                <div class="form__row">
-                  <div class="form__block">
-                    <select  class="" id="selectType" required>
-                      <option value="Not chosen"></option> 
-                      <option value="Sed ut perspiciatis">Sed ut perspiciatis</option> 
-                      <option value="Nemo enim ipsam">Nemo enim ipsam</option> 
-                      <option value="Et harum quidem">Et harum quidem</option> 
-                      <option value="Temporibus autem">Temporibus autem</option> 
-                      <option value="Itaque earum rerum">Itaque earum rerum</option> 
-                    </select>
-                    <div class="form__error">Выберите один из пунктов списка.</div>
-                  </div>
-                  <div class="form__block">
-                    <input class="input" id="email" name="email" type="email" placeholder="Ваш e-mail" required>
-                    <label for="email" class="label label_animate">
-                      Ваш e-mail
-                    </label>
-                    <div class="form__error">Это поле необходимо заполнить.</div>
-                  </div>
-                  <div class="form__block">
-                    <input class="input" id="firstname" name="firstname" type="text" placeholder="Ваше имя" required>
-                    <label for="email" class="label label_animate">
-                      Ваше имя
-                    </label>
-                    <div class="form__error">Это поле необходимо заполнить.</div>
-                  </div>
-                </div>
-                <div class="form__row">
-                  <div class="form_slider">
-                    <div class="slider__desc">
-                      <div class="slider__text">Sed ut perspiciatis, unde omnis iste natus</div>
-                      <div class="slider__percents"><span id="showPercents"></span> %</div>
-                    </div>
-                    <input type="range" min="1" max="100" value="50" class="input__slider" id="Percents">
-                  </div>
-                  <div class="form__file">
-                    <input name="file" type="file" name="file" id="input__file" class=" input__file" multiple>
-                    <label for="input__file" class="label input form__file-button">
-                      <span class="file-button__icon">
-                        <img class="file-button__icon-pic" src="./images/pic/file.png" alt="Прикрепить файл">
-                        </span>
-                      <span class="file-button__text">Прикрепить файл</span>
-                    </label>
-                </div>
-                  </div>
-                  <div class="form__row form__row-button">
+          <div class="form_order">
+            <div class="container form__container">
+              <form action="#" id="form">
+                  <div class="form__row">
                     <div class="form__block">
-                      <input class="btn order__form-btn" name="" type="submit" value="Отправить">
+                      <select  class="" id="selectType" required>
+                        <option value="Not chosen"></option> 
+                        <option value="Sed ut perspiciatis">Sed ut perspiciatis</option> 
+                        <option value="Nemo enim ipsam">Nemo enim ipsam</option> 
+                        <option value="Et harum quidem">Et harum quidem</option> 
+                        <option value="Temporibus autem">Temporibus autem</option> 
+                        <option value="Itaque earum rerum">Itaque earum rerum</option> 
+                      </select>
+                      <div class="form__error">Выберите один из пунктов списка.</div>
+                    </div>
+                    <div class="form__block">
+                      <input class="input" id="email" name="email" type="email" placeholder="Ваш e-mail" required>
+                      <label for="email" class="label label_animate">
+                        Ваш e-mail
+                      </label>
+                      <div class="form__error">Это поле необходимо заполнить.</div>
+                    </div>
+                    <div class="form__block">
+                      <input class="input" id="firstname" name="firstname" type="text" placeholder="Ваше имя" required>
+                      <label for="email" class="label label_animate">
+                        Ваше имя
+                      </label>
+                      <div class="form__error">Это поле необходимо заполнить.</div>
+                    </div>
                   </div>
-                </div>
-            </form>
+                  <div class="form__row">
+                    <div class="form_slider">
+                      <div class="slider__desc">
+                        <div class="slider__text">Sed ut perspiciatis, unde omnis iste natus</div>
+                        <div class="slider__percents"><span id="showPercents"></span> %</div>
+                      </div>
+                      <input type="range" min="1" max="100" value="50" class="input__slider" id="Percents">
+                    </div>
+                    <div class="form__file">
+                      <input name="file" type="file" id="input__file" class=" input__file" multiple>
+                      <label for="input__file" class="label input form__file-button">
+                        <span class="file-button__icon">
+                          <img class="file-button__icon-pic" src="./images/pic/file.png" alt="Прикрепить файл">
+                          </span>
+                        <span class="file-button__text">Прикрепить файл</span>
+                      </label>
+                  </div>
+                    </div>
+                    <div class="form__row form__row-button">
+                      <div class="form__block">
+                        <input class="btn order__form-btn" name="submitBtn" type="submit" value="Отправить">
+                    </div>
+                  </div>
+              </form>
           </div>
           </div>
         </div>
@@ -264,6 +265,5 @@
     </div>
     <script src="main.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
   </body>
 </html>

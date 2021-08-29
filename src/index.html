@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="main.min.css">
+    <title>LoremIpsum.Net</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="main.min.css">
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
         <div class="container header__container">
           <a href="#" class="header__logo" target="_blank">
-              <img src="./images/pic/logo.png" alt="Логотип" class="logo_image">
+              <img src="./images/pic/logo.svg" alt="Логотип" class="logo_image">
           </a>
           <nav class="header__navigation">
               <ul class="navigation__list">
@@ -30,15 +29,15 @@
                       <a href="#" class="navigation__link" id="toForm1">Оформить заказ</a>
                   </li>
               </ul>
-              <div class="hamburger">
+              <a href="#" class="hamburger">
                   <span class="hamburger__line"></span>
                   <span class="hamburger__line"></span>
                   <span class="hamburger__line"></span>
-              </div>
+              </a>
           </nav>
         </div>
       </header>
-      <section class="secton section_hero">
+      <section class="secton hero ">
         <div class="container hero__container">
           <div class="hero__content">
             <div class="hero__text">
@@ -65,12 +64,12 @@
             </div>
             <div class="hero__buttons">
               <a class="order-link btn" id="toForm" href="">Заказать</a>
-              <a class="order-desc btn btn__white" href="">Подробнее</a>
+              <a class="order-desc btn btn--white" href="">Подробнее</a>
             </div>
           </div>
         </div>
       </section>
-      <section class="secton section_order">
+      <section class="secton order">
         <div class="container order__container">
           <div class="order__text">
               <h2 class="title order__title">
@@ -138,29 +137,35 @@
               <form action="#" id="form">
                   <div class="form__row">
                     <div class="form__block">
-                      <select  class="" id="selectType" required>
-                        <option value="Not chosen"></option> 
-                        <option value="Sed ut perspiciatis">Sed ut perspiciatis</option> 
-                        <option value="Nemo enim ipsam">Nemo enim ipsam</option> 
-                        <option value="Et harum quidem">Et harum quidem</option> 
-                        <option value="Temporibus autem">Temporibus autem</option> 
-                        <option value="Itaque earum rerum">Itaque earum rerum</option> 
-                      </select>
-                      <div class="form__error">Выберите один из пунктов списка.</div>
+                      <div class="select-block">
+                        <select  class="" id="selectType" required>
+                          <option value="Not chosen"></option> 
+                          <option value="Sed ut perspiciatis">Sed ut perspiciatis</option> 
+                          <option value="Nemo enim ipsam">Nemo enim ipsam</option> 
+                          <option value="Et harum quidem">Et harum quidem</option> 
+                          <option value="Temporibus autem">Temporibus autem</option> 
+                          <option value="Itaque earum rerum">Itaque earum rerum</option> 
+                        </select>
+                        <div class="form__error">Выберите один из пунктов списка.</div>
+                      </div>
                     </div>
                     <div class="form__block">
-                      <input class="input" id="email" name="email" type="email" placeholder="Ваш e-mail" required>
-                      <label for="email" class="label label_animate">
-                        Ваш e-mail
-                      </label>
-                      <div class="form__error">Это поле необходимо заполнить.</div>
+                      <div class="email-input">
+                        <input class="input" id="email" name="email" type="email" placeholder="Ваш e-mail" required>
+                        <label for="email" class="label label_animate">
+                          Ваш e-mail
+                        </label>
+                        <div class="form__error">Это поле необходимо заполнить.</div>
+                      </div>
                     </div>
                     <div class="form__block">
-                      <input class="input" id="firstname" name="firstname" type="text" placeholder="Ваше имя" required>
-                      <label for="email" class="label label_animate">
-                        Ваше имя
-                      </label>
-                      <div class="form__error">Это поле необходимо заполнить.</div>
+                      <div class="firstname-input">
+                        <input class="input" id="firstname" name="firstname" type="text" placeholder="Ваше имя" required>
+                        <label for="email" class="label label_animate">
+                          Ваше имя
+                        </label>
+                        <div class="form__error">Это поле необходимо заполнить.</div>
+                      </div>
                     </div>
                   </div>
                   <div class="form__row">
@@ -175,7 +180,7 @@
                       <input name="file" type="file" id="input__file" class=" input__file" multiple>
                       <label for="input__file" class="label input form__file-button">
                         <span class="file-button__icon">
-                          <img class="file-button__icon-pic" src="./images/pic/file.png" alt="Прикрепить файл">
+                          <img class="file-button__icon-pic" src="./images/pic/file.svg" alt="Прикрепить файл">
                           </span>
                         <span class="file-button__text">Прикрепить файл</span>
                       </label>

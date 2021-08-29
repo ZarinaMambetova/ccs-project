@@ -1,8 +1,4 @@
 .header__navigation {
-  width: 35%;
-    @media (max-width: 1010px) { 
-      width: 50%;
-    }
     @include tablet { 
       display: flex;
       justify-content: flex-end;
@@ -70,9 +66,17 @@
 
 
 .navigation__item {
-  margin-right: 10px;
+  margin-right: 60px;
 
   &:last-child {
     margin-right: 0;
   }
+  @media (max-width: 950px) { 
+    margin-right: 20px;
+  } 
+}
+
+.navigation__link:hover {
+  color: $hover;
+
 }
